@@ -6,10 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link
-      rel="stylesheet"
-      href="{{ url_for('static', filename= 'css/style.css') }}"
-    />
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
@@ -17,26 +14,23 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="icon"
-      href="{{ url_for('static', filename= 'img/favicon.ico') }}"
-    />
+    <link rel="icon" href="img/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="{{url_for('static', filename= 'img/apple-touch-icon.png') }}"
+      href="img/apple-touch-icon.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="{{url_for('static', filename= 'img/favicon-32x32.png') }}"
+      href="img/favicon-32x32.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="{{url_for('static', filename= 'img/favicon-16x16.png') }}"
+      href="img/favicon-16x16.png"
     />
     <script src="https://auth.propelauth.com/auth.min.js"></script>
     <script
@@ -57,37 +51,21 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <title>{% block title %} {% endblock %}</title>
+    <title>Home</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="content">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-background">
-          <a class="navbar-brand theme-color" href="/">Reaction Racer</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">{% block menu_items %}{% endblock %}</div>
-          </div>
-        </nav>
-        <main class="container p-5">{% block main %}{% endblock %}</main>
+    <nav class="navbar navbar-expand-lg navbar-light navbar-background">
+      <a class="navbar-brand theme-color" href="/">The Illusion of Choice</a>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <!-- MENU ITEMS GO HERE -->
+        </div>
       </div>
-      <footer class="small text-center text-muted">
-        <ul>
-          <li>Akhil Deshpande</li>
-          <li>Aryan Jain</li>
-        </ul>
-      </footer>
+    </nav>
+    <div class="container">
+      <div class="half-width left-half">Left Side Content</div>
+      <div class="half-width right-half">Right Side Content</div>
     </div>
   </body>
-  <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  <script src="scripts.js"></script>
 </html>
